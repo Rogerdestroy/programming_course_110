@@ -1,0 +1,1 @@
+python D:\高師課程\程式設計\Final_project_110\報童問題.txt < D:\高師課程\程式設計\Final_project_110\報童問題_輸入.txt

@@ -1,3 +1,10 @@
+想法來源：
+https://www.coursera.org/learn/pbc1
+chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.scu.edu.tw/ba/2004conference/2004paper/38-OM01.pdf
+chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.shs.edu.tw/works/essay/2020/10/2020101307054533.pdf
+http://josh24311.blogspot.com/2018/11/python.html
+https://www.coursera.org/learn/bigdataanalysis
+
 merio：
 https://github.com/uvipen/Super-mario-bros-A3C-pytorch
 https://arxiv.org/abs/1602.01783
@@ -13,3 +20,7 @@ https://supermario-game.com/
 selenium：
 https://medium.com/marketingdatascience/selenium%E6%95%99%E5%AD%B8-%E4%B8%80-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8webdriver-send-keys-988816ce9bed
 https://acodingirl.blogspot.com/2020/08/pythonselenium.html
+
+顏文字：
+https://gist.github.com/itsbalamurali/8470549
+http://lpdw.free.fr/ascii.htm

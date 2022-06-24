@@ -1,15 +1,11 @@
 import numpy as np
 from math import log
 import cv2
-#import matplotlib.pyplot as plt
-#import pandas as pd
-#import pygame
 import prettytable as pt
 import random
 import time
 import sys
 import os
-#from  moviepy.editor import *
 import tkinter as tk
 from tkinter import messagebox
 import tkinter.ttk as ttk
@@ -17,7 +13,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from tqdm import tqdm 
+
 #import wx
+#from  moviepy.editor import *
+#import matplotlib.pyplot as plt
+#import pandas as pd
+#import pygame
+
    
 #a, b, c, d = 10, 100, 1000, 10000  #sells price
 #abuy, bbuy, cbuy, dbuy = 1, 1, 1, 1, #import prise
@@ -63,7 +65,7 @@ class Store():
         if day > 50 or cus > 1000:
             return cus +  random.randint(0,3)
         elif day % 5 == 0 and day < 61 and day != 0:
-            return cus +  random.randint(0, int(log(day+1, 2.2))) + random.randint(3,6)
+            return cus +  random.randint(0, int(log(day+1, 2.2))) + random.randint(2,5)
         elif day<30:
             return cus +  random.randint(0, int(log(day+1, 2.2)))
         else:
@@ -74,7 +76,7 @@ class Store():
     
     #inventory_cost 存貨成本
     def storehouse():   #存貨倉庫
-        return 75
+        return 5
     
     def interest():     #銀行利息
         return 1.00002739726
@@ -540,6 +542,7 @@ def work_event():
             print(good[i].name+"進貨價格:",good[i].in_prise,"元")
         print()
         print("運送價格：",Store.truck(),"元/kg")
+        print("存貨價格：",Store.storehouse(),"元/kg")
         print()
         for i in range(1,5):
             print(good[i].name+"商品重量:",good[i].good_kg,"kg")
@@ -654,7 +657,7 @@ def work_event():
             print("你還沒有顧客")
         else:    
             for i in tqdm(range(len(customer))):
-                file = open("cos_inf_day.txt", mode="w")
+                file = open("cos_inf_day.txt", mode="a") #資料庫
                 file.write(str(year_c)+'年 \t'+str(month_c)+'月\t'+str(day_c)+'日') #今天日期
                 file.write('\n')
                 file.close()
@@ -1128,7 +1131,18 @@ if __name__ == "__main__":
         結束天數判斷
         
         '''
+        z = 0
+        kg_house = 0
+        for i in range(1,5):
+            kg_house += good[i].good_kg * good[i].num
+        #print(kg_house)
+        z = ( kg_house//1) if  (kg_house % 1) == 0 else  (kg_house//1) + 1
+        print("扣除今日存貨成本：",z*Store.storehouse(),"元")
+        packet -= z*Store.storehouse()
+        print()
+        print('------------------------------------------')
         
+        del z,kg_house
         #time+sys 輸出文字
         time.sleep(0.5)
         Control_.print_one("***恭喜妳過了第"+str(day)+"天***")
@@ -1158,16 +1172,13 @@ if power <= 0 or packet <= 0:
 else:
     print(
     '''
-                      ,  ,
-                       \\ \\
-                       ) \\ \\    _p_
-                       )^\))\))  /  ^\  
-                        \_|| || / /^`-' 讚喔~
-               __       -\ \\--/ /      感謝遊玩~
-             <'  \\___/   ___. )'
-                  `====\ )___/\\
-                       //     `"
-                       \\    /  \  
+                                     _
+                                  -=\`\      
+                              |\ ____\_\__   
+            ~~~~~~感謝遊玩   -=\c`""""""" "`) 
+                               `~~~~~/ /~~`  
+                                 -==/ /      
+                                   '-'
     '''
     )
     
