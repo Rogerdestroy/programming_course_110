@@ -1,5 +1,6 @@
-# '411071114 林鈺翔.py'為期末專案
-## '411071114 林鈺翔.ipynb'為期末作業
+# "411071114 林鈺翔.py"為期末專案  
+#### "411071114 林鈺翔.ipynb"為期末作業    
+#### 資料來源正在努力更新中 
 use Python：Anaconda  conda 4.13.0   
 Python 3.6.13   
 IDE：spyder   
@@ -28,9 +29,6 @@ from tqdm import tqdm
   </tr>
 </thead>
 <tbody>
-  <tr>
-    <td class="tg-0pky" colspan="2">--------------------------------------------------</td>
-  </tr>
   <tr>
     <td class="tg-0pky">absl-py</td>
     <td class="tg-0pky">0.15.0</td>
