@@ -1000,7 +1000,7 @@ if __name__ == "__main__":
         
         #表格
         day += 1
-        print("Day: ",day, '\t', "財產: ", packet , '\t', "體力： ", power)
+        print("Day: ",day, '\t', "財產: ", int(packet) , '\t', "體力： ", power)
         
         p_tb[1:5] = [good[1].store_price,good[2].store_price,good[3].store_price,good[4].store_price]
         c_tb[1:5] = [good[1].num,good[2].num,good[3].num,good[4].num]  
